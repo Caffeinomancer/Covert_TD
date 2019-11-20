@@ -1,8 +1,16 @@
 #include <iostream>
 #include <SDL.h>
 
+#include "LinkedList.h"
+
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
+
+void testVoid()
+{
+  for (unsigned int i = 0; i < 10; i++)
+    std::cout << "IT WORKS\n";
+}
 
 int main(int argc, char* args[])
 {
@@ -24,6 +32,12 @@ int main(int argc, char* args[])
   screenSurface = SDL_GetWindowSurface(window);
   SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF));
 
+  
+  List *testList = new List;
+  testList->CreateNode(testVoid);
+  testList->test();
+
+
   bool _continue = true;
   while (_continue)
   {
@@ -41,6 +55,8 @@ int main(int argc, char* args[])
     }
   }
   
+  delete testList;
+
   SDL_DestroyWindow(window);
   SDL_Quit();
 

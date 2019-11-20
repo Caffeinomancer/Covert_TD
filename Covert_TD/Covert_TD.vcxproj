@@ -124,6 +124,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Coroutine.cpp" />
+    <ClCompile Include="Source\LinkedList.cpp" />
     <ClCompile Include="Source\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +212,8 @@
     <ClInclude Include="3rdParty\include\SDL_version.h" />
     <ClInclude Include="3rdParty\include\SDL_video.h" />
     <ClInclude Include="3rdParty\include\SDL_vulkan.h" />
+    <ClInclude Include="Source\Coroutine.h" />
+    <ClInclude Include="Source\LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="3rdParty\include\SDL_config.h.cmake" />
