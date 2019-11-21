@@ -1,15 +1,18 @@
 #include <iostream>
 #include <SDL.h>
 
-#include "LinkedList.h"
+#include "Coroutine.h"
+#include "Logger.h"
 
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
 
+Logger* Logger::m_pInstance = NULL;
+
 void testVoid()
 {
   for (unsigned int i = 0; i < 10; i++)
-    std::cout << "IT WORKS\n";
+    std::cout << "IT WORKSssss\n";
 }
 
 int main(int argc, char* args[])
@@ -32,10 +35,11 @@ int main(int argc, char* args[])
   screenSurface = SDL_GetWindowSurface(window);
   SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 0xFF, 0xFF, 0xFF));
 
-  
-  List *testList = new List;
-  testList->CreateNode(testVoid);
-  testList->test();
+  Coroutine* coroutines = new Coroutine;
+  coroutines->AddCoroutine(testVoid);
+  coroutines->Update();
+  //List *testList = new List;
+  //testList->CreateNode(testVoid);
 
 
   bool _continue = true;
@@ -54,9 +58,8 @@ int main(int argc, char* args[])
       SDL_UpdateWindowSurface(window);
     }
   }
-  
-  delete testList;
 
+  delete coroutines;
   SDL_DestroyWindow(window);
   SDL_Quit();
 

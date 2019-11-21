@@ -87,12 +87,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\cover\source\repos\Covert_TD\Covert_TD\3rdParty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Random\Covert_TD\Covert_TD\3rdParty\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\cover\source\repos\Covert_TD\Covert_TD\3rdParty\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Random\Covert_TD\Covert_TD\3rdParty\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -126,6 +126,7 @@
   <ItemGroup>
     <ClCompile Include="Source\Coroutine.cpp" />
     <ClCompile Include="Source\LinkedList.cpp" />
+    <ClCompile Include="Source\Logger.cpp" />
     <ClCompile Include="Source\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +215,7 @@
     <ClInclude Include="3rdParty\include\SDL_vulkan.h" />
     <ClInclude Include="Source\Coroutine.h" />
     <ClInclude Include="Source\LinkedList.h" />
+    <ClInclude Include="Source\Logger.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="3rdParty\include\SDL_config.h.cmake" />

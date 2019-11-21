@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 struct Node
 {
   void (*data)();
@@ -15,7 +13,7 @@ public:
 
   void CreateNode(void (*value)());
 
-  void test();
+  void CoroutineUpdate();
 
 private:
   Node *mHead, *mTail;

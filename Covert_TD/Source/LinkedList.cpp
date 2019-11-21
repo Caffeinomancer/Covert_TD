@@ -18,16 +18,15 @@ void List::CreateNode(void (*value)())
   }
 }
 
-void List::test()
+void List::CoroutineUpdate()
 {
   Node *temp = new Node;
   temp = mHead;
   while (temp != nullptr)
   {
-    void (*foo)() = temp->data;
-    foo();
+    void (*update)() = temp->data;
+    update();
 
-    //std::cout << temp->data;
     temp = temp->next;
   }
 }
